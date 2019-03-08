@@ -142,6 +142,8 @@ router.post("/:id/add-reservation/", async function (req, res, next) {
     const numGuests = req.body.numGuests;
     const notes = req.body.notes;
 
+    console.log("AT ROUTE", numGuests)
+
     const reservation = new Reservation(
         {customerId, startAt, numGuests, notes});
     await reservation.save();

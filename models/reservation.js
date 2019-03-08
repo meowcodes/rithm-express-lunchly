@@ -17,11 +17,14 @@ class Reservation {
   }
 
   /** Setter/Getter for numGuests */
-  set numGuests(val=1){
-    if(val < 1 || !Number.isInteger(val)){
-      val = 1;
+  set numGuests(val){
+    let num = Number(val)
+
+    if(isNaN(num) || num < 1){
+      num = 1;
     }
-    this._numGuests = val;
+    
+    this._numGuests = num;
   }
 
   get numGuests(){
@@ -85,6 +88,7 @@ class Reservation {
 
   /** save a reservation */
   async save() {
+    console.log("IN SAVE", this._numGuests, this._numGuests)
     // add rsv to database
     const result = await db.query(`
       INSERT INTO reservations 
