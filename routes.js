@@ -12,10 +12,20 @@ const router = new express.Router();
 
 router.get("/", async function (req, res, next) {
   try {
-    const customers = await Customer.all();
+    // get search word
+    const search = req.query.search
+    const customers
+
+    if(search){
+      // get customers matching search word
+      customers = await Customer.search();
+    }else {
+      // if no search word, jst return all
+      customers = await Customer.all();
+    }
+  
     return res.render("customer_list.html", {customers})
   }
-
   catch (err) {
     return next(err);
   }
