@@ -72,6 +72,23 @@ class Customer {
     return results.rows.map(c => new Customer(c));
   }
 
+  static async getBestTen(){
+    let results = await db.query(
+     ` SELECT customers.id AS "id", 
+        first_name AS "firstName",  
+        last_name AS "lastName", 
+        phone AS "phone", 
+        customers.notes AS "notes"
+      FROM customers 
+      JOIN reservations 
+      ON customers.id=reservations.customer_id  
+      GROUP BY customers.id, first_name, last_name, phone, customers.notes
+      ORDER BY COUNT(customer_id) DESC LIMIT 10;`
+    );
+    // }
+    return results.rows.map(c => new Customer(c));
+  }
+
   /** get a customer by ID. */
 
   static async get(id) {
@@ -120,6 +137,5 @@ class Customer {
     }
   }
 }
-
 
 module.exports = Customer;
