@@ -16,6 +16,19 @@ class Reservation {
     this.notes = notes;
   }
 
+  /** Setter/Getter for numGuests */
+  set numGuests(val=1){
+    if(val < 1 || !Number.isInteger(val)){
+      val = 1;
+    }
+    this._numGuests = val;
+  }
+
+  get numGuests(){
+    return this._numGuests;
+  }
+
+
   /** methods for setting/getting startAt time */
 
   set startAt(val) {
