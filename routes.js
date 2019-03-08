@@ -13,12 +13,12 @@ const router = new express.Router();
 router.get("/", async function (req, res, next) {
   try {
     // get search word
-    const search = req.query.search
-    const customers
+    const search = req.query.search;
+    let customers;
 
     if(search){
       // get customers matching search word
-      customers = await Customer.search();
+      customers = await Customer.search(search);
     }else {
       // if no search word, jst return all
       customers = await Customer.all();

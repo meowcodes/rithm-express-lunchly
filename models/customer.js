@@ -53,6 +53,25 @@ class Customer {
     return results.rows.map(c => new Customer(c));
   }
 
+  static async search(searchWord){
+    // let searchArray = searchWord.split(" ");
+    let results;
+    // for(let word in searchArray){
+      results = await db.query(
+        `SELECT id, 
+          first_name AS "firstName",  
+          last_name AS "lastName", 
+          phone, 
+          notes
+        FROM customers
+        WHERE first_name || ' ' || last_name iLIKE $1
+        ORDER BY last_name, first_name
+        `, [`%${searchWord}%`]
+      );
+    // }
+    return results.rows.map(c => new Customer(c));
+  }
+
   /** get a customer by ID. */
 
   static async get(id) {
