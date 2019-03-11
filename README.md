@@ -1,10 +1,12 @@
 # Lunchly
 
-Lunchly is a web application for managing reservations. It is an exercise designed by [Rithm School](https://github.com/rithmschool)
+Lunchly is a web application for managing reservations. It is an exercise designed by [Rithm School](https://github.com/rithmschool).
 
 ## Getting Started
 
-`git clone https://github.com/meowcodes/rithm-express-lunchly.git` to contribute.
+``` bash
+git clone https://github.com/meowcodes/rithm-express-lunchly.git
+``` 
 
 ### Prerequisites
 
@@ -21,7 +23,7 @@ createdb lunchly
 
 ### Installing
 
-`npm install` to install dependencies from package.json file.
+`npm install` installs remaining dependencies from package.json file.
 
 ## Running the application
 
@@ -43,11 +45,11 @@ Go to `about:inspect` on Google Chrome and find the app under 'Remote Target'
 
 ## Running the tests
 
-`jest --watchAll` to run all the tests.
+`jest --watchAll` runs all the tests.
 
 ## Deployment
 
-
+-
 
 ## Built with
 
