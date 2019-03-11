@@ -1,0 +1,70 @@
+# Lunchly
+
+Lunchly is a web application for managing reservations. It is an exercise designed by [Rithm School](https://github.com/rithmschool)
+
+## Getting Started
+
+`git clone https://github.com/meowcodes/rithm-express-lunchly.git` to contribute.
+
+### Prerequisites
+
+Postgres, Node, Nodemon, Jest
+
+``` bash
+which brew
+which postgres
+which node
+npm install -g nodemon
+npm install -g jest
+createdb lunchly
+```
+
+### Installing
+
+`npm install` to install dependencies from package.json file.
+
+## Running the application
+
+### Running the server
+
+`nodemon --inspect server.js`
+
+Below message signifies that the server has started.
+
+`listening on 3000`
+
+### Accessingg the application
+
+Go to `localhost:3000` to visit the app.
+
+### Accessingg the debugger
+
+Go to `about:inspect` on Google Chrome and find the app under 'Remote Target'
+
+## Running the tests
+
+`jest --watchAll` to run all the tests.
+
+## Deployment
+
+
+
+## Built with
+
+* [Node](https://nodejs.org/en/) - The server-side environment user
+* [Express](https://expressjs.com/) - The web framework used
+* [Postgres](https://www.postgresql.org/) - The database managemenet system used
+
+## Authors
+
+* **Lena Ryoo** - *Contributor* - [meowcodes](https://github.com/meowcodes)
+* **Chao Ye** - *Initial work* - [Cha0Ye](https://github.com/Cha0Ye)
+
+See also the list of [contributors](https://github.com/meowcodes/rithm-express-lunchly/graphs/contributors) who participated in this project.
+
+## Acknowledgments
+
+* [Rithm School](https://github.com/rithmschool)
+* [Elie](https://github.com/elie) - Rithm School Instructor
+* [Joel](https://github.com/joelburton) - Rithm School Instructor
+* [Alissa](https://github.com/alissarenz) - Rithm School Instructor
