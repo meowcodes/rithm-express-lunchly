@@ -19,6 +19,7 @@ which node
 npm install -g nodemon
 npm install -g jest
 createdb lunchly
+psql lunchly < data.sql
 ```
 
 ### Installing
