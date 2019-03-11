@@ -44,6 +44,10 @@ Go to `localhost:3000` to visit the app.
 
 Go to `about:inspect` on Google Chrome and find the app under 'Remote Target'
 
+## Using the API
+
+-
+
 ## Running the tests
 
 `jest --watchAll` runs all the tests.
@@ -61,7 +65,7 @@ Go to `about:inspect` on Google Chrome and find the app under 'Remote Target'
 ## Authors
 
 * **Lena Ryoo** - *Contributor* - [meowcodes](https://github.com/meowcodes)
-* **Chao Ye** - *Initial work* - [Cha0Ye](https://github.com/Cha0Ye)
+* **Chengsi Gao** - *Initial work* - [chengsig](https://github.com/chengsig)
 
 See also the list of [contributors](https://github.com/meowcodes/rithm-express-lunchly/graphs/contributors) who participated in this project.
 
